@@ -5,12 +5,15 @@ using UnityEngine;
 public class Color : MonoBehaviour
 {
     [SerializeField] private int ColorValor;
-    private int CantCambios = 0;
+    [SerializeField] private AudioClip Sonido_Pintura;
+    
+    public int CantCambios = 0;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class Color : MonoBehaviour
                 player.gameObject.GetComponent<Color_Personaje>().CambiarColor(ColorValor);
             }
             CantCambios++;
+            audioSource.PlayOneShot(Sonido_Pintura);
         }
     }
 }

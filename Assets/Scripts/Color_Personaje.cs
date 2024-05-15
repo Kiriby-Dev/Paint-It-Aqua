@@ -39,6 +39,12 @@ public class Color_Personaje : MonoBehaviour
         TransformarColor();
     }
 
+    public void ResetColor() 
+    {
+        colorPersonaje = 0;
+        TransformarColor();
+    }
+
     private void TransformarColor() 
     {
         Sprite nuevoSprite = blanco;

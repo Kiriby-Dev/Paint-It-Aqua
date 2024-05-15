@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Cinematica.unity
+    guid: 9d17e57c92583004eb42b5b8131d5170
+  - enabled: 1
+    path: Assets/Scenes/Menu_Inicial.unity
+    guid: dd38320c2c9cbdb439805bfc272f9aee
+  - enabled: 1
+    path: Assets/Scenes/Juego.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
