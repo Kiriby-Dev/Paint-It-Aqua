@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f; // Velocidad de movimiento del jugador
+    [SerializeField] private float speed; // Velocidad de movimiento del jugador
     [SerializeField] private AudioClip Sonido_Movimiento;
 
     private AudioSource audioSource;
@@ -20,7 +20,7 @@ public class Movimiento : MonoBehaviour
     void Update()
     {
         // Si el jugador no está actualmente en movimiento, permitir la entrada del jugador
-        if (rb.velocity == Vector2.zero) 
+        if (rb.velocity.magnitude < 0.1f)
         {
             isMoving = false;
         }
