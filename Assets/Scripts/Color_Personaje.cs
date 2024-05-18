@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Color_Personaje : MonoBehaviour
 {
     public int ColorPersonaje => colorPersonaje;
+    private Dictionary<int, bool> colorStates = new Dictionary<int, bool>();
 
     [Header("Sprites Colores")]
     [SerializeField] private Sprite blanco;
@@ -27,21 +29,33 @@ public class Color_Personaje : MonoBehaviour
         
     }
 
-    public void CambiarColor(int color) 
+    public void CambiarColor(int color)
     {
-        colorPersonaje += color;
-        TransformarColor();
-    }
+        if (!colorStates.ContainsKey(color))
+        {
+            colorStates[color] = false;
+        }
 
-    public void DeshacerColor(int color) 
-    {
-        colorPersonaje -= color;
+        if (colorStates[color])
+        {
+            colorPersonaje -= color;
+            colorStates[color] = false;
+        }
+        else
+        {
+            colorPersonaje += color;
+            colorStates[color] = true;
+        }
         TransformarColor();
     }
 
     public void ResetColor() 
     {
         colorPersonaje = 0;
+        foreach (var color in colorStates.Keys.ToList())
+        {
+            colorStates[color] = false;
+        }
         TransformarColor();
     }
 

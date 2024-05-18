@@ -29,14 +29,8 @@ public class Reset : MonoBehaviour
     public void Restart()
     {
         Player.gameObject.GetComponent<Color_Personaje>().ResetColor();
-        Verde.gameObject.GetComponent<Color>().CantCambios = 0;
-        Azul.gameObject.GetComponent<Color>().CantCambios = 0;
-        Verde1.gameObject.GetComponent<Color>().CantCambios = 0;
-        Azul1.gameObject.GetComponent<Color>().CantCambios = 0;
-        Verde2.gameObject.GetComponent<Color>().CantCambios = 0;
-        Azul2.gameObject.GetComponent<Color>().CantCambios = 0;
-        Verde3.gameObject.GetComponent<Color>().CantCambios = 0;
-        Azul3.gameObject.GetComponent<Color>().CantCambios = 0;
+        Player.gameObject.GetComponent<Color_Personaje>().ResetColor();
+
         switch (CameraController.gameObject.GetComponent<CamaraController>().currentLevel) 
         {
             case 0:
