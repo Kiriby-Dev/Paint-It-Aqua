@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,12 +8,7 @@ public class Menu_Inicial : MonoBehaviour
 {
     public void Jugar() 
     {
-        SceneManager.LoadScene("Juego");
-    }
-
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(2);
     }
 
     public void Salir() 
