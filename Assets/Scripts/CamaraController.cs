@@ -9,7 +9,7 @@ public class CamaraController : MonoBehaviour
     public int currentLevel = 0; // Nivel actual
 
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         // Desactiva todas las Cinemachine Virtual Cameras excepto la del nivel actual
         for (int i = 0; i < virtualCameras.Count; i++)
