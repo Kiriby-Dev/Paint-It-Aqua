@@ -33,7 +33,7 @@ public class Reset : MonoBehaviour
                 Player.gameObject.transform.position = new Vector3(19.5163f, 9.268312f, 0);
                 break;
             case 2:
-                Player.gameObject.transform.position = new Vector3(19.51628f, 21.26069f, 0);
+                Player.gameObject.transform.position = new Vector3(19.51628f, 22.267f, 0);
                 break;
             case 3:
                 Player.gameObject.transform.position = new Vector3(19.51608f, 33.26069f, 0);

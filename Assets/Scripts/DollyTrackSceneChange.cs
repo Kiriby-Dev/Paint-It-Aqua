@@ -8,6 +8,7 @@ public class DollyTrackSceneChange : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera virtualCamera; // La cámara virtual de Cinemachine
     [SerializeField] private CinemachineSmoothPath dollyPath; // El camino del Dolly
     [SerializeField] private string nextSceneName; // Nombre de la siguiente escena
+    [SerializeField] private Animator animator;
 
     private CinemachineTrackedDolly trackedDolly;
 
@@ -25,6 +26,7 @@ public class DollyTrackSceneChange : MonoBehaviour
 
         if (trackedDolly.m_PathPosition >= 1)
         {
+            animator.SetTrigger("T_Out");
             StartCoroutine(WaitAndChangeScene(5f));
         }
     }
