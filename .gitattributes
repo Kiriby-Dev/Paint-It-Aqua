@@ -4,10 +4,6 @@
 # Asociar archivos .cs con C#
 *.cs linguist-language=C#
 
-# Asociar archivos .shader y .cginc con ShaderLab
-*.shader linguist-language=ShaderLab
-*.cginc linguist-language=ShaderLab
-
 # Asociar archivos .html con HTML
 *.html linguist-language=HTML
 
