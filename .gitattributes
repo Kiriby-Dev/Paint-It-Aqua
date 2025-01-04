@@ -9,3 +9,6 @@
 
 # Asociar archivos .css con CSS
 *.css linguist-language=CSS
+
+*.shader linguist-vendored
+*.cginc linguist-vendored
